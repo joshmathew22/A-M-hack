@@ -109,6 +109,8 @@ export default function Checkout() {
                         zipcode: addressDetails.zipcode,
                         city: addressDetails.city,
                         country: addressDetails.country,
+                        budget: addressDetails.budget,
+                        salary: addressDetails.salary,
                         products: cart.getCart(),
                         total: cart.cartTotal()
                     })
@@ -190,7 +192,7 @@ export default function Checkout() {
                             <div className="p-4">
                                 <div className="flex items-baseline justify-between text-sm mb-1">
                                     <div>Items ({cart.getCart().length})</div>
-                                    <div>£{(cart.cartTotal() / 100).toFixed(2)}</div>
+                                    <div>${(cart.cartTotal() / 100).toFixed(2)}</div>
                                 </div>
                                 <div className="flex items-center justify-between mb-4 text-sm">
                                     <div>Shipping:</div>
@@ -202,7 +204,7 @@ export default function Checkout() {
                                 <div className="flex items-center justify-between my-4">
                                     <div className="font-semibold">Order total</div>
                                     <div className="text-2xl font-semibold">
-                                        £{(cart.cartTotal() / 100).toFixed(2)}
+                                        ${(cart.cartTotal() / 100).toFixed(2)}
                                     </div>
                                 </div>
 
