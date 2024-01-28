@@ -85,6 +85,7 @@ export default function TopMenu() {
                         
                         
                     </ul>
+                    <a href= "address/page.js">Report</a>
 
                     <ul 
                         id="TopMenuRight"

@@ -146,7 +146,7 @@ export default function Checkout() {
                     <div className="w-[65%]">
                         <div className="bg-white rounded-lg p-4 border">
 
-                            <div className="text-xl font-semibold mb-2">Shipping Address</div>
+                            <div className="text-xl font-semibold mb-2">Report</div>
 
                             <div>
                                 {!isLoadingAddress ?
@@ -162,6 +162,8 @@ export default function Checkout() {
                                         <li>Zip: {addressDetails.zipcode}</li>
                                         <li>City: {addressDetails.city}</li>
                                         <li>Country: {addressDetails.country}</li>
+                                        <li>Budget: {addressDetails.budget}</li>
+                                        <li>Salary: {addressDetails.salary}</li>
                                     </ul>
                                 : null}
 
