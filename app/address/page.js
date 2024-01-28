@@ -91,7 +91,7 @@ export default function Home() {
         }  else if (!budget) {
             setError({ type: 'budget', message: 'A budget is required'})
             isError = true
-        }else if (!country) {
+        }else if (!salary) {
             setError({ type: 'salary', message: 'A salary is required'})
             isError = true
         }
@@ -118,7 +118,7 @@ export default function Home() {
                 city, 
                 country,
                 budget,
-                salary
+                salary,
             })
 
             setTheCurrentAddres(response)
@@ -211,7 +211,7 @@ export default function Home() {
                                 <TextInput 
                                     className="w-full mt-2"
                                     string={budget}
-                                    placeholder="budget"
+                                    placeholder="Budget"
                                     onUpdate={setBudget}
                                     error={showError('budget')}
                                 />

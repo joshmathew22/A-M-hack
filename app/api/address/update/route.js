@@ -22,7 +22,7 @@ export async function POST(req) {
                 city: body.city,
                 country: body.country,
                 budget: body.budget,
-                salary: body.budget,
+                salary: body.salary,
             }
         })
         await prisma.$disconnect();

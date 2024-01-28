@@ -66,7 +66,7 @@ export default function Cart() {
 
                           <div className="flex items-center justify-between mt-4 mb-1 text-lg font-semibold">
                               <div>Subtotal</div>
-                              <div>£{(cart.cartTotal() / 100).toFixed(2)}</div>
+                              <div>${(cart.cartTotal() / 100).toFixed(2)}</div>
                           </div>
                       </div>
                   </ClientOnly>
