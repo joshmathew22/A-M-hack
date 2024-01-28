@@ -13,8 +13,8 @@ const useCreateAddress = async (details) => {
             zipcode: details.zipcode,
             city: details.city,
             country: details.country,
-            budget: details.budget,
-            salary: details.salary,
+            budget: parseInt(details.budget),
+            salary: parseInt(details.salary),
         })
     })
 
