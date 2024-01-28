@@ -109,6 +109,8 @@ export default function Checkout() {
                         zipcode: addressDetails.zipcode,
                         city: addressDetails.city,
                         country: addressDetails.country,
+                        budget: addressDetails.budget,
+                        salary: addressDetails.salary,
                         products: cart.getCart(),
                         total: cart.cartTotal()
                     })
@@ -146,7 +148,11 @@ export default function Checkout() {
                     <div className="w-[65%]">
                         <div className="bg-custom-color rounded-lg p-4 border">
 
+<<<<<<< HEAD
                             <div className="text-xl font-semibold text-white mb-2">Shipping Address</div>
+=======
+                            <div className="text-xl font-semibold mb-2">Report</div>
+>>>>>>> 7e2e2b309db4689042afdc55891ee9dbfd2940f9
 
                             <div>
 
@@ -157,6 +163,8 @@ export default function Checkout() {
                                         <li>Zip: {addressDetails.zipcode}</li>
                                         <li>City: {addressDetails.city}</li>
                                         <li>Country: {addressDetails.country}</li>
+                                        <li>Budget: {addressDetails.budget}</li>
+                                        <li>Salary: {addressDetails.salary}</li>
                                     </ul>
                                 : null}
                                 {!isLoadingAddress ?
@@ -201,8 +209,13 @@ export default function Checkout() {
                                 <div className="border-t" />
 
                                 <div className="flex items-center justify-between my-4">
+<<<<<<< HEAD
                                     <div className="font-semibold text-white">Order total</div>
                                     <div className="text-2xl font-semibold text-white">
+=======
+                                    <div className="font-semibold">Order total</div>
+                                    <div className="text-2xl font-semibold">
+>>>>>>> 7e2e2b309db4689042afdc55891ee9dbfd2940f9
                                         ${(cart.cartTotal() / 100).toFixed(2)}
                                     </div>
                                 </div>

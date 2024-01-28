@@ -21,6 +21,8 @@ export async function POST(req) {
                 zipcode: body.zipcode,
                 city: body.city,
                 country: body.country,
+                budget: body.budget,
+                salary: body.salary,
             }
         })
         await prisma.$disconnect();

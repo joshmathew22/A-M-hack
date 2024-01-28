@@ -24,6 +24,8 @@ export default function Home() {
     const [zipcode, setZipcode] = useState('')
     const [city, setCity] = useState('')
     const [country, setCountry] = useState('')
+    const [budget, setBudget] = useState('')
+    const [salary, setSalary] = useState('')
     const [isUpdatingAddress, setIsUpdatingAddress] = useState(false)
     const [error, setError] = useState({})
 
@@ -62,6 +64,8 @@ export default function Home() {
         setZipcode(result.zipcode)
         setCity(result.city)
         setCountry(result.country)
+        setBudget(result.budget)
+        setSalary(result.salary)
     }
 
     const validate = () => {
@@ -83,6 +87,12 @@ export default function Home() {
             isError = true
         } else if (!country) {
             setError({ type: 'country', message: 'A country is required'})
+            isError = true
+        }  else if (!budget) {
+            setError({ type: 'budget', message: 'A budget is required'})
+            isError = true
+        }else if (!salary) {
+            setError({ type: 'salary', message: 'A salary is required'})
             isError = true
         }
         return isError
@@ -106,7 +116,9 @@ export default function Home() {
                 address, 
                 zipcode, 
                 city, 
-                country 
+                country,
+                budget,
+                salary,
             })
 
             setTheCurrentAddres(response)
@@ -131,7 +143,11 @@ export default function Home() {
             >
                 <div className="mx-auto border-2 border-back-color bg-custom-color rounded-lg p-3">
 
+<<<<<<< HEAD
                     <div className="text-xl text-white text-center text-bold mb-2">Address Details</div>
+=======
+                    <div className="text-xl text-bold mb-2 ">Report</div>
+>>>>>>> 7e2e2b309db4689042afdc55891ee9dbfd2940f9
 
                     <form onSubmit={submit}>
                             <div className="mb-4 rounded-lg">
@@ -170,6 +186,7 @@ export default function Home() {
                                 </ClientOnly>
                             </div>
 
+<<<<<<< HEAD
                             <div className="mb-4 rounded-lg">
                                 <ClientOnly>
                                     <TextInput 
@@ -183,6 +200,9 @@ export default function Home() {
                             </div>
                     
                         <div>
+=======
+                        <div className="mb-4">
+>>>>>>> 7e2e2b309db4689042afdc55891ee9dbfd2940f9
                             <ClientOnly>
                                 <TextInput 
                                     className="w-full mt-2"
@@ -190,6 +210,30 @@ export default function Home() {
                                     placeholder="Country"
                                     onUpdate={setCountry}
                                     error={showError('country')}
+                                />
+                            </ClientOnly>
+                        </div>
+
+                        <div className="mb-4">
+                            <ClientOnly>
+                                <TextInput 
+                                    className="w-full mt-2"
+                                    string={budget}
+                                    placeholder="Budget"
+                                    onUpdate={setBudget}
+                                    error={showError('budget')}
+                                />
+                            </ClientOnly>
+                        </div>
+
+                        <div>
+                            <ClientOnly>
+                                <TextInput 
+                                    className="w-full mt-2"
+                                    string={salary}
+                                    placeholder="Salary"
+                                    onUpdate={setSalary}
+                                    error={showError('salary')}
                                 />
                             </ClientOnly>
                         </div>
@@ -209,7 +253,7 @@ export default function Home() {
                             `}
                         >
                             {!isUpdatingAddress
-                                ? <div>Update Address</div>
+                                ? <div>Update Report</div>
                                 : <div className="flex items-center justify-center gap-2">
                                       <AiOutlineLoading3Quarters className="animate-spin" />
                                       Please wait...
