@@ -92,14 +92,14 @@ export default function TopMenu() {
                     >
                         <li 
                             onClick={() => router.push('/address')} 
-                            className="flex items-center gap-2 px-3 hover:underline cursor-pointer"
+                            className="flex items-center gap-2 px-3 hover:underline cursor-pointer text-sm text-white"
                         >
-                            <img width={32} src="/images/usa.jpeg"/>
+                            <img width={32} src="/images/usa.jpeg" />
                             Ship to
                         </li>
                         <ClientOnly>
                             <li className="px-3 hover:underline cursor-pointer">
-                                <div onClick={() => router.push('/cart')} className="relative">
+                                <div onClick={() => router.push('/cart')} className="relative ">
                                     <AiOutlineShoppingCart size={22}/>
                                     {cart.cartCount() > 0 ?
                                         <div className="absolute text-[10px] -top-[2px] -right-[5px] bg-red-500 w-[14px] h-[14px] rounded-full text-white">

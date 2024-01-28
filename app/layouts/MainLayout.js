@@ -19,6 +19,7 @@ export default function MainLayout({ children }) {
 
     return (
       <>
+      <div className='bg-custom-color'>
         <div id="MainLayout" className='min-w-[1050px] max-w-[1300px] mx-auto'>
             <div>
               {isLoading ? <Loading /> : <div></div>}
@@ -33,6 +34,7 @@ export default function MainLayout({ children }) {
               <Footer />
             </div>
         </div>
+      </div>
       </>
     )
   }

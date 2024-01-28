@@ -129,59 +129,59 @@ export default function Home() {
                 id="AddressPage" 
                 className="mt-4 max-w-[600px] mx-auto px-2"
             >
-                <div className="mx-auto bg-white rounded-lg p-3">
+                <div className="mx-auto border-2 border-back-color bg-custom-color rounded-lg p-3">
 
-                    <div className="text-xl text-bold mb-2">Address Details</div>
+                    <div className="text-xl text-white text-center text-bold mb-2">Address Details</div>
 
                     <form onSubmit={submit}>
-                        <div className="mb-4">
-                            <ClientOnly>
-                                <TextInput 
-                                    className="w-full"
-                                    string={name}
-                                    placeholder="Name"
-                                    onUpdate={setName}
-                                    error={showError('name')}
-                                />
-                            </ClientOnly>
-                        </div>
+                            <div className="mb-4 rounded-lg">
+                                <ClientOnly>
+                                    <TextInput 
+                                        className="w-full"
+                                        string={name}
+                                        placeholder="Name"
+                                        onUpdate={setName}
+                                        error={showError('name')}
+                                    />
+                                </ClientOnly>
+                            </div>
 
-                        <div className="mb-4">
-                            <ClientOnly>
-                                <TextInput 
-                                    className="w-full"
-                                    string={address}
-                                    placeholder="Address"
-                                    onUpdate={setAddress}
-                                    error={showError('address')}
-                                />
-                            </ClientOnly>
-                        </div>
+                            <div className="mb-4 rounded-lg">
+                                <ClientOnly>
+                                    <TextInput 
+                                        className="w-full"
+                                        string={address}
+                                        placeholder="Address"
+                                        onUpdate={setAddress}
+                                        error={showError('address')}
+                                    />
+                                </ClientOnly>
+                            </div>
 
-                        <div className="mb-4">
-                            <ClientOnly>
-                                <TextInput 
-                                    className="w-full mt-2"
-                                    string={zipcode}
-                                    placeholder="Zip Code"
-                                    onUpdate={setZipcode}
-                                    error={showError('zipcode')}
-                                />
-                            </ClientOnly>
-                        </div>
+                            <div className="mb-4 rounded-lg">
+                                <ClientOnly>
+                                    <TextInput 
+                                        className="w-full mt-2"
+                                        string={zipcode}
+                                        placeholder="Zip Code"
+                                        onUpdate={setZipcode}
+                                        error={showError('zipcode')}
+                                    />
+                                </ClientOnly>
+                            </div>
 
-                        <div className="mb-4">
-                            <ClientOnly>
-                                <TextInput 
-                                    className="w-full mt-2"
-                                    string={city}
-                                    placeholder="City"
-                                    onUpdate={setCity}
-                                    error={showError('city')}
-                                />
-                            </ClientOnly>
-                        </div>
-
+                            <div className="mb-4 rounded-lg">
+                                <ClientOnly>
+                                    <TextInput 
+                                        className="w-full mt-2"
+                                        string={city}
+                                        placeholder="City"
+                                        onUpdate={setCity}
+                                        error={showError('city')}
+                                    />
+                                </ClientOnly>
+                            </div>
+                    
                         <div>
                             <ClientOnly>
                                 <TextInput 
@@ -204,8 +204,8 @@ export default function Home() {
                                 text-lg 
                                 font-semibold 
                                 p-3 
-                                rounded
-                                ${isUpdatingAddress ? 'bg-blue-800' : 'bg-blue-600'}
+                                rounded-lg
+                                ${isUpdatingAddress ? 'bg-custom-color' : 'bg-custom-color'}
                             `}
                         >
                             {!isUpdatingAddress

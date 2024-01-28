@@ -33,7 +33,7 @@ export default function SimilarProducts () {
             <div className="border-b py-1 max-w-[1200px] mx-auto" />
 
             <div className="max-w-[1200px] mx-auto">
-                <div className="font-bold text-2xl py-2 mt-4">Similar sponsored items</div>
+                <div className="flex font-bold text-2xl text-white py-2 mt-4">Similar sponsored items</div>
 
                 {products.length > 0 ?
                   <div className="grid grid-cols-5 gap-4">
