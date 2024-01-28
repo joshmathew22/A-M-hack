@@ -28,6 +28,11 @@ export default function Checkout() {
     const [addressDetails, setAddressDetails] = useState({})
     const [isLoadingAddress, setIsLoadingAddress] = useState(false)
 
+    const s = addressDetails.salary
+    const b = addressDetails.budget
+    const price = (cart.cartTotal() / 100).toFixed(2)
+
+
     useEffect(() => {
         if (cart?.cartTotal() <= 0) {
             toast.error("Your cart is empty!", { autoClose: 3000 })
@@ -137,6 +142,15 @@ export default function Checkout() {
         setTimeout(() => { errorMsg.textContent = "" }, 3000);
     };
 
+    const showGrade = ()=>{
+        if (b<price){
+            return "A"
+        }else{
+            return "F"
+        }
+    }
+
+
   return (
     <>
         <MainLayout>
@@ -148,11 +162,7 @@ export default function Checkout() {
                     <div className="w-[65%]">
                         <div className="bg-custom-color rounded-lg p-4 border">
 
-<<<<<<< HEAD
                             <div className="text-xl font-semibold text-white mb-2">Shipping Address</div>
-=======
-                            <div className="text-xl font-semibold mb-2">Report</div>
->>>>>>> 7e2e2b309db4689042afdc55891ee9dbfd2940f9
 
                             <div>
 
@@ -209,13 +219,11 @@ export default function Checkout() {
                                 <div className="border-t" />
 
                                 <div className="flex items-center justify-between my-4">
-<<<<<<< HEAD
+
                                     <div className="font-semibold text-white">Order total</div>
                                     <div className="text-2xl font-semibold text-white">
-=======
-                                    <div className="font-semibold">Order total</div>
-                                    <div className="text-2xl font-semibold">
->>>>>>> 7e2e2b309db4689042afdc55891ee9dbfd2940f9
+
+
                                         ${(cart.cartTotal() / 100).toFixed(2)}
                                     </div>
                                 </div>
@@ -242,10 +250,12 @@ export default function Checkout() {
                             </div>
                         </ClientOnly>
 
-                        <div className="flex items-center p-4 justify-center gap-2 border-t">
-                            <img width={50} src="/images/Logo2.png" />
-                            <div className=" font-light text-white mb-2 mt-2">MONEY BACK GUARANTEE</div>
+                        <div className="flex items-center p-4 gap-2 border-t">
+                            <div onload="myFunction()"className=" font-light text-white mb-2 mt-2">showGrade() </div>
+                                    
                         </div>
+
+                        
                     </div>
                 </div>
             </div>

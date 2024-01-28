@@ -143,11 +143,8 @@ export default function Home() {
             >
                 <div className="mx-auto border-2 border-back-color bg-custom-color rounded-lg p-3">
 
-<<<<<<< HEAD
                     <div className="text-xl text-white text-center text-bold mb-2">Address Details</div>
-=======
                     <div className="text-xl text-bold mb-2 ">Report</div>
->>>>>>> 7e2e2b309db4689042afdc55891ee9dbfd2940f9
 
                     <form onSubmit={submit}>
                             <div className="mb-4 rounded-lg">
@@ -185,8 +182,6 @@ export default function Home() {
                                     />
                                 </ClientOnly>
                             </div>
-
-<<<<<<< HEAD
                             <div className="mb-4 rounded-lg">
                                 <ClientOnly>
                                     <TextInput 
@@ -198,11 +193,7 @@ export default function Home() {
                                     />
                                 </ClientOnly>
                             </div>
-                    
-                        <div>
-=======
                         <div className="mb-4">
->>>>>>> 7e2e2b309db4689042afdc55891ee9dbfd2940f9
                             <ClientOnly>
                                 <TextInput 
                                     className="w-full mt-2"
