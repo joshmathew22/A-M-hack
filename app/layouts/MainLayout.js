@@ -24,7 +24,7 @@ export default function MainLayout({ children }) {
               {isLoading ? <Loading /> : <div></div>}
               <TopMenu />
               <MainHeader />
-              <SubMenu />
+              {/*<SubMenu />*/}
             </div>
 
             <div>{children}</div>
